@@ -1,0 +1,41 @@
+//
+//  CLEffectTool.h
+//
+//  Created by sho yakushiji on 2013/10/23.
+//  Copyright (c) 2013年 CALACULU. All rights reserved.
+//
+
+
+
+#import "CLEffectBase.h"
+
+
+@interface CLEffectTool :NSObject  <CLEffectDelegate>
+{
+    NSArray *_effectClasses;
+    
+    UIImage *_originalImage;
+    UIImage *_thumnailImage;
+    
+    UIScrollView *_menuScroll;
+    UIActivityIndicatorView *_indicatorView;
+}
+
+
+@property (strong ,nonatomic)NSArray *effectClasses;
+
+@property (strong ,nonatomic)UIImage *originalImage;
+@property (strong ,nonatomic)UIImage *thumnailImage;
+@property (strong ,nonatomic)UIImage *nowImg;
+
+@property (strong,nonatomic)UIImageView *showImgV;
+
+@property (strong ,nonatomic)UIScrollView *menuScroll;
+@property (strong ,nonatomic)UIActivityIndicatorView *indicatorView;
+
+@property (nonatomic, strong) UIView *selectedMenu;
+@property (nonatomic, strong) CLEffectBase *selectedEffect;
+
+- (void)setup;
+
+@end

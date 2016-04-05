@@ -1,0 +1,33 @@
+//
+//  LJFilterTool.h
+//  miniFilter
+//
+//  Created by qianfeng on 15/10/3.
+//  Copyright (c) 2015年 miniFilter. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+static const CGFloat kCLImageToolAnimationDuration = 0.3;
+static const CGFloat kCLImageToolFadeoutDuration   = 0.2;
+
+
+@interface LJFilterTool : NSObject
+{
+    UIImage *_originalImage;
+    UIImage *_thumnailImage;
+    NSArray *_filters;
+    UIScrollView *_filterScroll;
+}
+@property (strong,nonatomic)UIImage *originalImage;
+@property (strong,nonatomic)UIImage *thumnailImage;
+@property (strong,nonatomic)UIImage *nowImage;
+
+@property (strong,nonatomic)NSArray *filters;
+@property (strong,nonatomic)UIScrollView *filterScroll;
+@property (strong,nonatomic)UIImageView *showImg;
+@property (strong,nonatomic)UISlider *slider;
+- (void)setup;
+
+@end
